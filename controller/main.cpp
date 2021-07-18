@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <vld.h>
+#include <boost/algorithm/string.hpp>
 #include "request_manager.hpp"
 
 int main(int argc, char* argv[])
@@ -19,7 +20,7 @@ int main(int argc, char* argv[])
 		fmt::print("Send request: ");
 		std::cin >> msg;
 		req.send(msg);
-		if (msg == "STOP"s) {
+		if (boost::iequals(msg, "STOP"s)) {
 			break;
 		}
 		fmt::print("\n");
