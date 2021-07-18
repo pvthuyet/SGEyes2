@@ -7,6 +7,7 @@ void watcher_manager::start()
 {
 	LOGENTER;
 	SPDLOG_DEBUG("debug mode on");
+	throw std::runtime_error("test throw");
 	LOGEXIT;
 }
 
