@@ -83,4 +83,5 @@ message(STATUS "SGLIB_INCLUDEDIR: ${SGLIB_INCLUDEDIR}")
 message(STATUS "SGLIB_LIBRARIES: ${SGLIB_LIBRARIES}")
 
 ### watcher
+add_subdirectory(controller)
 add_subdirectory(watcher)
