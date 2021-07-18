@@ -17,7 +17,10 @@ add_executable(watcher
 	"peripherals/usb_manager.cpp" 
 	"configuration/config_manager.hpp" 
 	"configuration/config_manager.cpp"
-)
+	"services/service_manager.hpp"
+	"services/service_manager.cpp"
+	"services/listener_service.hpp" 
+	"services/listener_service.cpp")
 target_include_directories(watcher PRIVATE ${SGLIB_INCLUDEDIR};${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(watcher PRIVATE ${WINDOWS_LIBRARIES} ${SGLIB_LIBRARIES})
 

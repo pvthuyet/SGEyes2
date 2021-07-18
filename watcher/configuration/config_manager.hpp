@@ -11,6 +11,8 @@ private:
 	short port_;
 
 public:
+	short get_port() const noexcept;
+
 	void load(std::string_view path);
 };
 
