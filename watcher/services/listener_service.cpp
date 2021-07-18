@@ -3,6 +3,7 @@
 #include <format>
 #include <zmqpp/zmqpp.hpp>
 #include <thread>
+#include <boost/algorithm/string.hpp>
 
 SAIGON_NAMESPACE_BEGIN
 
@@ -37,7 +38,8 @@ void listener_service::start(short port)
 				msg >> ident;
 				msg >> control;
 				SPDLOG_DEBUG("{} {}", ident, control);
-				if (control == "STOP"s) {
+				
+				if (boost::iequals(control, "STOP"s)) {
 					break;
 				}
 				else {
