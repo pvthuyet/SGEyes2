@@ -8,6 +8,9 @@ SAIGON_NAMESPACE_BEGIN
 class config_manager;
 class service_manager;
 
+/// <summary>
+/// manage watcher all from project
+/// </summary>
 class watcher_manager
 {
 private:
@@ -18,6 +21,9 @@ public:
 	watcher_manager();
 	~watcher_manager() noexcept;
 
+	/// <summary>
+	/// start watcher
+	/// </summary>
 	void start();
 };
 
